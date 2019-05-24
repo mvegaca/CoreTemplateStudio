@@ -10,6 +10,8 @@ namespace Microsoft.Templates.Core
         Page = 2,
         Feature = 3,
         Composition = 4,
+        Services = 5,
+        Testing = 6,
         Unspecified = 100,
     }
 }
