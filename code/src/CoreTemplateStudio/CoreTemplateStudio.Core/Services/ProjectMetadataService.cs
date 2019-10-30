@@ -35,10 +35,15 @@ namespace Microsoft.Templates.Core.Services
 
             try
             {
-                var path = Path.Combine(GenContext.ToolBox.Shell.GetActiveProjectPath(), "Package.appxmanifest");
-                if (File.Exists(path))
+                var metadataPath = Path.Combine(GenContext.ToolBox.Shell.GetActiveProjectPath(), "Package.appxmanifest");
+                if (!File.Exists(metadataPath))
                 {
-                    var manifest = XElement.Load(path);
+                    metadataPath = Path.Combine(GenContext.ToolBox.Shell.GetActiveProjectPath(), $"WTS.ProjectConfig.xml");
+                }
+
+                if (File.Exists(metadataPath))
+                {
+                    var manifest = XElement.Load(metadataPath);
                     XNamespace ns = "http://schemas.microsoft.com/appx/developer/windowsTemplateStudio";
 
                     var metadata = manifest.Descendants().FirstOrDefault(e => e.Name.LocalName == MetadataLiteral && e.Name.Namespace == ns);
