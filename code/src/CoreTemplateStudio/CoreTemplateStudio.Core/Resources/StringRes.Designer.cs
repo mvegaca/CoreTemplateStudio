@@ -673,6 +673,15 @@ namespace Microsoft.Templates.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creating &apos;{0}&apos; packaging ....
+        /// </summary>
+        public static string StatusBarGeneratingPackagingMessage {
+            get {
+                return ResourceManager.GetString("StatusBarGeneratingPackagingMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Creating &apos;{0}&apos; page ....
         /// </summary>
         public static string StatusBarGeneratingPageMessage {

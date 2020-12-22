@@ -100,6 +100,9 @@ namespace Microsoft.Templates.Core.Diagnostics
                     case TemplateType.Testing:
                         await TrackItemGenAsync(TelemetryEvents.TestingGen, template, genSource, appProjectType, appFrontendFramework, appBackendFramework, appPlatform, result);
                         break;
+                    case TemplateType.Packaging:
+                        await TrackItemGenAsync(TelemetryEvents.PackagingGen, template, genSource, appProjectType, appFrontendFramework, appBackendFramework, appPlatform, result);
+                        break;
                     case TemplateType.Unspecified:
                         break;
                 }

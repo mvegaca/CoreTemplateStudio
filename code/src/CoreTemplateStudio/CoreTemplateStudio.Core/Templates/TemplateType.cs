@@ -11,6 +11,7 @@ namespace Microsoft.Templates.Core
         Feature,
         Service,
         Testing,
+        Packaging,
         Composition,
         Unspecified,
     }

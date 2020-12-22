@@ -57,6 +57,8 @@ namespace Microsoft.Templates.Core.Gen
 
         public List<UserSelectionItem> Testing { get; } = new List<UserSelectionItem>();
 
+        public List<UserSelectionItem> Packaging { get; } = new List<UserSelectionItem>();
+
         public IEnumerable<UserSelectionItem> Items
         {
             get
@@ -153,6 +155,9 @@ namespace Microsoft.Templates.Core.Gen
                     break;
                 case TemplateType.Testing:
                     Testing.Add(template);
+                    break;
+                case TemplateType.Packaging:
+                    Packaging.Add(template);
                     break;
             }
         }

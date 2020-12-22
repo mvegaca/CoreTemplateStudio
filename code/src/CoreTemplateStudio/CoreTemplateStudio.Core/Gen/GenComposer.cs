@@ -29,6 +29,7 @@ namespace Microsoft.Templates.Core.Gen
             AddTemplates(userSelection.Features, genQueue, userSelection, false);
             AddTemplates(userSelection.Services, genQueue, userSelection, false);
             AddTemplates(userSelection.Testing, genQueue, userSelection, false);
+            AddTemplates(userSelection.Packaging, genQueue, userSelection, false);
 
             genQueue = AddInCompositionTemplates(genQueue, userSelection, false);
 
@@ -171,6 +172,7 @@ namespace Microsoft.Templates.Core.Gen
                 new QueryableProperty("feature", string.Join("|", userSelection.Features.Select(p => p.TemplateId))),
                 new QueryableProperty("service", string.Join("|", userSelection.Services.Select(p => p.TemplateId))),
                 new QueryableProperty("testing", string.Join("|", userSelection.Testing.Select(p => p.TemplateId))),
+                new QueryableProperty("packaging", string.Join("|", userSelection.Packaging.Select(p => p.TemplateId))),
             };
 
             if (!string.IsNullOrEmpty(userSelection.FrontEndFramework))

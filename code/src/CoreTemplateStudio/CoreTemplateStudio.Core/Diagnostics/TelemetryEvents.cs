@@ -22,6 +22,8 @@ namespace Microsoft.Templates.Core.Diagnostics
 
         public static string TestingGen { get; private set; } = Prefix + "TestingGen";
 
+        public static string PackagingGen { get; private set; } = Prefix + "PackagingGen";
+
         public static string Wizard { get; private set; } = Prefix + "Wizard";
 
         public static string SessionStart { get; private set; } = Prefix + "SessionStart";

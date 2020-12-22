@@ -16,6 +16,7 @@ namespace Microsoft.Templates.Core.Extensions
                 case TemplateType.Feature:
                 case TemplateType.Service:
                 case TemplateType.Testing:
+                case TemplateType.Packaging:
                     return true;
                 default:
                     return false;

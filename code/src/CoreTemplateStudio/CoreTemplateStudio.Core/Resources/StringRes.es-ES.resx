@@ -581,4 +581,7 @@ No se pueden integrar las modificaciones siguientes: {2}
   <data name="TemplatesSynchronizationError" xml:space="preserve">
     <value>Error synchronizing templates.</value>
   </data>
+  <data name="StatusBarGeneratingPackagingMessage" xml:space="preserve">
+    <value>Creating '{0}' packaging ...</value>
+  </data>
 </root>

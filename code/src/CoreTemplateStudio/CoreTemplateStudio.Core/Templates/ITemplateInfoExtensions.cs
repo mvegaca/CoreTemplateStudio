@@ -39,6 +39,8 @@ namespace Microsoft.Templates.Core
                     return TemplateType.Service;
                 case "TESTING":
                     return TemplateType.Testing;
+                case "PACKAGING":
+                    return TemplateType.Packaging;
                 case "COMPOSITION":
                     return TemplateType.Composition;
                 default:
